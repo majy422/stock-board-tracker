@@ -1,0 +1,322 @@
+{
+  "update_time": "2026-07-07 11:25:51",
+  "zt_stocks": [
+    {
+      "code": "002497",
+      "name": "雅化集团",
+      "price": 24.65,
+      "change_pct": 9.995537757873535,
+      "amount": 310233488.0,
+      "turnover": 1.1877769231796265,
+      "industry": "化学制品",
+      "reason": ""
+    },
+    {
+      "code": "002841",
+      "name": "视源股份",
+      "price": 43.08,
+      "change_pct": 10.010213851928711,
+      "amount": 213819739.0,
+      "turnover": 0.9520210027694702,
+      "industry": "消费电子",
+      "reason": ""
+    },
+    {
+      "code": "301251",
+      "name": "威尔高",
+      "price": 50.77,
+      "change_pct": 19.99527359008789,
+      "amount": 194175653.0,
+      "turnover": 5.0597004890441895,
+      "industry": "元件",
+      "reason": ""
+    },
+    {
+      "code": "601121",
+      "name": "宝地矿业",
+      "price": 6.47,
+      "change_pct": 10.034013748168945,
+      "amount": 45223359.0,
+      "turnover": 0.8737124800682068,
+      "industry": "冶钢原料",
+      "reason": ""
+    },
+    {
+      "code": "600120",
+      "name": "浙江东方",
+      "price": 4.88,
+      "change_pct": 9.909910202026367,
+      "amount": 127628660.0,
+      "turnover": 0.7657538056373596,
+      "industry": "多元金融",
+      "reason": ""
+    },
+    {
+      "code": "603137",
+      "name": "恒尚节能",
+      "price": 20.83,
+      "change_pct": 9.978880882263184,
+      "amount": 14409923.0,
+      "turnover": 0.3781634569168091,
+      "industry": "装修装饰",
+      "reason": ""
+    },
+    {
+      "code": "001229",
+      "name": "魅视科技",
+      "price": 38.82,
+      "change_pct": 10.002833366394043,
+      "amount": 62914172.0,
+      "turnover": 2.2107856273651123,
+      "industry": "计算机设",
+      "reason": ""
+    },
+    {
+      "code": "000973",
+      "name": "佛塑科技",
+      "price": 14.58,
+      "change_pct": 10.037735939025879,
+      "amount": 1193988416.0,
+      "turnover": 8.526853561401367,
+      "industry": "塑料",
+      "reason": ""
+    },
+    {
+      "code": "002132",
+      "name": "恒星科技",
+      "price": 6.19,
+      "change_pct": 9.946714401245117,
+      "amount": 1158492112.0,
+      "turnover": 13.48459243774414,
+      "industry": "通用设备",
+      "reason": ""
+    },
+    {
+      "code": "001311",
+      "name": "多利科技",
+      "price": 19.67,
+      "change_pct": 10.011185646057129,
+      "amount": 60778369.0,
+      "turnover": 1.7876931428909302,
+      "industry": "汽车零部",
+      "reason": ""
+    },
+    {
+      "code": "000970",
+      "name": "中科三环",
+      "price": 17.13,
+      "change_pct": 10.019268035888672,
+      "amount": 834910912.0,
+      "turnover": 4.081777095794678,
+      "industry": "金属新材",
+      "reason": ""
+    },
+    {
+      "code": "002951",
+      "name": "金时科技",
+      "price": 14.84,
+      "change_pct": 10.007412910461426,
+      "amount": 80880106.0,
+      "turnover": 1.3912640810012817,
+      "industry": "其他电源",
+      "reason": ""
+    },
+    {
+      "code": "603356",
+      "name": "华菱精工",
+      "price": 17.93,
+      "change_pct": 10.0,
+      "amount": 81272033.0,
+      "turnover": 3.4608519077301025,
+      "industry": "专用设备",
+      "reason": ""
+    },
+    {
+      "code": "603178",
+      "name": "圣龙股份",
+      "price": 16.35,
+      "change_pct": 10.026917457580566,
+      "amount": 130626435.0,
+      "turnover": 3.4612233638763428,
+      "industry": "汽车零部",
+      "reason": ""
+    },
+    {
+      "code": "002584",
+      "name": "西陇科学",
+      "price": 10.3,
+      "change_pct": 10.04273509979248,
+      "amount": 406214832.0,
+      "turnover": 8.654651641845703,
+      "industry": "电子化学",
+      "reason": ""
+    },
+    {
+      "code": "603893",
+      "name": "瑞芯微",
+      "price": 193.73,
+      "change_pct": 9.998865127563477,
+      "amount": 1992506048.0,
+      "turnover": 2.467574119567871,
+      "industry": "半导体",
+      "reason": ""
+    },
+    {
+      "code": "605118",
+      "name": "力鼎光电",
+      "price": 38.08,
+      "change_pct": 9.994222640991211,
+      "amount": 186841260.0,
+      "turnover": 1.2180997133255005,
+      "industry": "计算机设",
+      "reason": ""
+    },
+    {
+      "code": "001365",
+      "name": "天海电子",
+      "price": 43.46,
+      "change_pct": 9.997468948364258,
+      "amount": 307800336.0,
+      "turnover": 12.524742126464844,
+      "industry": "汽车零部",
+      "reason": ""
+    },
+    {
+      "code": "002585",
+      "name": "双星新材",
+      "price": 11.37,
+      "change_pct": 9.961315155029297,
+      "amount": 431593680.0,
+      "turnover": 4.425238609313965,
+      "industry": "塑料",
+      "reason": ""
+    },
+    {
+      "code": "600793",
+      "name": "宜宾纸业",
+      "price": 19.37,
+      "change_pct": 9.9943208694458,
+      "amount": 309348496.0,
+      "turnover": 9.205622673034668,
+      "industry": "造纸",
+      "reason": ""
+    },
+    {
+      "code": "600246",
+      "name": "万通发展",
+      "price": 18.6,
+      "change_pct": 9.994086265563965,
+      "amount": 2786263616.0,
+      "turnover": 8.118276596069336,
+      "industry": "房地产开",
+      "reason": ""
+    },
+    {
+      "code": "603861",
+      "name": "白云电器",
+      "price": 15.2,
+      "change_pct": 9.985527992248535,
+      "amount": 625757616.0,
+      "turnover": 7.989563941955566,
+      "industry": "电网设备",
+      "reason": ""
+    },
+    {
+      "code": "001206",
+      "name": "依依股份",
+      "price": 19.54,
+      "change_pct": 10.022522926330566,
+      "amount": 142196093.0,
+      "turnover": 7.007214546203613,
+      "industry": "个护用品",
+      "reason": ""
+    },
+    {
+      "code": "002137",
+      "name": "实益达",
+      "price": 11.43,
+      "change_pct": 10.009624481201172,
+      "amount": 859994608.0,
+      "turnover": 19.49835205078125,
+      "industry": "光学光电",
+      "reason": ""
+    },
+    {
+      "code": "002129",
+      "name": "TCL中环",
+      "price": 11.02,
+      "change_pct": 9.980039596557617,
+      "amount": 2359686976.0,
+      "turnover": 5.473607063293457,
+      "industry": "光伏设备",
+      "reason": ""
+    },
+    {
+      "code": "301516",
+      "name": "中远通",
+      "price": 18.72,
+      "change_pct": 20.0,
+      "amount": 374035536.0,
+      "turnover": 29.967933654785156,
+      "industry": "其他电源",
+      "reason": ""
+    },
+    {
+      "code": "605399",
+      "name": "晨光新材",
+      "price": 14.51,
+      "change_pct": 10.00758171081543,
+      "amount": 136160627.0,
+      "turnover": 3.1268913745880127,
+      "industry": "化学制品",
+      "reason": ""
+    },
+    {
+      "code": "002077",
+      "name": "大港股份",
+      "price": 19.53,
+      "change_pct": 10.028169631958008,
+      "amount": 1067115664.0,
+      "turnover": 9.679031372070312,
+      "industry": "半导体",
+      "reason": ""
+    },
+    {
+      "code": "600094",
+      "name": "大名城",
+      "price": 3.84,
+      "change_pct": 10.028653144836426,
+      "amount": 113756792.0,
+      "turnover": 1.4593812227249146,
+      "industry": "房地产开",
+      "reason": ""
+    },
+    {
+      "code": "003004",
+      "name": "声迅股份",
+      "price": 79.95,
+      "change_pct": 10.002751350402832,
+      "amount": 245973885.0,
+      "turnover": 4.652431488037109,
+      "industry": "计算机设",
+      "reason": ""
+    }
+  ],
+  "industry_flow": [],
+  "concept_flow": [],
+  "sector_volume": [],
+  "market": {
+    "date": "2026-07-06",
+    "volume": 59036490300.0,
+    "close": 4041.238,
+    "change_pct": -0.0594760714533904
+  },
+  "summary": {
+    "date": "2026-07-07",
+    "total_zt": 30,
+    "key_points": [
+      "🔥 涨停股集中板块：计算机设(3只)、汽车零部(3只)、化学制品(2只)、塑料(2只)、其他电源(2只)",
+      "📊 大盘📉 下跌0.06%，成交额590亿"
+    ]
+  }
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股票板块轮动跟踪器</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; }
+        .header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px 20px; text-align: center; }
+        .header h1 { font-size: 28px; margin-bottom: 10px; }
+        .header .update-time { font-size: 14px; opacity: 0.9; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .summary { background: white; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .summary h2 { color: #667eea; margin-bottom: 15px; font-size: 18px; }
+        .summary ul { list-style: none; }
+        .summary li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 15px; }
+        .summary li:last-child { border-bottom: none; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
+        .card-header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 15px 20px; font-size: 16px; font-weight: 600; }
+        .card-body { padding: 15px; max-height: 500px; overflow-y: auto; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        th { background: #f8f9fa; padding: 10px; text-align: left; font-weight: 600; position: sticky; top: 0; }
+        td { padding: 10px; border-bottom: 1px solid #f0f0f0; }
+        tr:hover { background: #f8f9fa; }
+        .positive { color: #e74c3c; }
+        .negative { color: #27ae60; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+        .tag-industry { background: #e3f2fd; color: #1565c0; }
+        .tag-concept { background: #f3e5f5; color: #7b1fa2; }
+        .loading { text-align: center; padding: 40px; color: #999; }
+        .refresh-btn { position: fixed; bottom: 30px; right: 30px; background: #667eea; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 15px rgba(102,126,234,0.4); }
+        .refresh-btn:hover { background: #5a6fd6; }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📈 股票板块轮动跟踪器</h1>
+        <div class="update-time" id="updateTime">加载中...</div>
+    </div>
+    
+    <div class="container">
+        <div class="summary" id="summary">
+            <h2>📊 今日要点</h2>
+            <div class="loading">加载中...</div>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-header">🔥 涨停股分布（非ST科创）</div>
+                <div class="card-body" id="ztStocks">
+                    <div class="loading">加载中...</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">💰 行业板块资金流向 TOP10</div>
+                <div class="card-body" id="industryFlow">
+                    <div class="loading">加载中...</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">🎯 概念板块涨幅 TOP10</div>
+                <div class="card-body" id="conceptFlow">
+                    <div class="loading">加载中...</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">📊 板块成交量 vs 大盘</div>
+                <div class="card-body" id="sectorVolume">
+                    <div class="loading">加载中...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <button class="refresh-btn" onclick="loadData()" title="刷新数据">🔄</button>
+
+    <script>
+        let data = null;
+        
+        async function loadData() {
+            try {
+                const response = await fetch('data/latest.json?t=' + Date.now());
+                if (!response.ok) throw new Error('数据加载失败');
+                data = await response.json();
+                renderAll();
+            } catch (e) {
+                console.error('加载数据出错:', e);
+                document.getElementById('updateTime').textContent = '数据加载失败，请检查网络连接';
+            }
+        }
+        
+        function renderAll() {
+            if (!data) return;
+            
+            // 更新时间
+            document.getElementById('updateTime').textContent = `最后更新: ${data.update_time}`;
+            
+            // 渲染总结
+            renderSummary();
+            
+            // 渲染涨停股
+            renderZtStocks();
+            
+            // 渲染行业资金流向
+            renderIndustryFlow();
+            
+            // 渲染概念板块
+            renderConceptFlow();
+            
+            // 渲染成交量
+            renderSectorVolume();
+        }
+        
+        function renderSummary() {
+            const el = document.getElementById('summary');
+            if (!data.summary || !data.summary.key_points) {
+                el.innerHTML = '<h2>📊 今日要点</h2><p>暂无数据</p>';
+                return;
+            }
+            el.innerHTML = `<h2>📊 今日要点</h2><ul>${data.summary.key_points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+        }
+        
+        function renderZtStocks() {
+            const el = document.getElementById('ztStocks');
+            if (!data.zt_stocks || data.zt_stocks.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">今日无涨停股</p>';
+                return;
+            }
+            
+            // 按行业分组
+            const grouped = {};
+            data.zt_stocks.forEach(s => {
+                const key = s.industry || '未知';
+                if (!grouped[key]) grouped[key] = [];
+                grouped[key].push(s);
+            });
+            
+            let html = '<table><thead><tr><th>板块</th><th>涨停股</th><th>数量</th></tr></thead><tbody>';
+            Object.entries(grouped).sort((a, b) => b[1].length - a[1].length).forEach(([industry, stocks]) => {
+                html += `<tr><td><span class="tag tag-industry">${industry}</span></td><td>${stocks.map(s => `${s.name}(${s.reason || ''})`).join('、')}</td><td>${stocks.length}</td></tr>`;
+            });
+            html += '</tbody></table>';
+            el.innerHTML = html;
+        }
+        
+        function renderIndustryFlow() {
+            const el = document.getElementById('industryFlow');
+            if (!data.industry_flow || data.industry_flow.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            let html = '<table><thead><tr><th>板块</th><th>主力净流入(亿)</th><th>涨跌幅</th><th>涨/跌</th></tr></thead><tbody>';
+            data.industry_flow.slice(0, 10).forEach(s => {
+                const flowClass = s.net_inflow >= 0 ? 'positive' : 'negative';
+                const flowSign = s.net_inflow >= 0 ? '+' : '';
+                const pctClass = s.change_pct >= 0 ? 'positive' : 'negative';
+                const pctSign = s.change_pct >= 0 ? '+' : '';
+                html += `<tr><td>${s.name}</td><td class="${flowClass}">${flowSign}${(s.net_inflow / 1e8).toFixed(2)}</td><td class="${pctClass}">${pctSign}${s.change_pct.toFixed(2)}%</td><td>${s.rise_count}/${s.fall_count}</td></tr>`;
+            });
+            html += '</tbody></table>';
+            el.innerHTML = html;
+        }
+        
+        function renderConceptFlow() {
+            const el = document.getElementById('conceptFlow');
+            if (!data.concept_flow || data.concept_flow.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            let html = '<table><thead><tr><th>概念</th><th>涨跌幅</th><th>主力净流入(亿)</th></tr></thead><tbody>';
+            data.concept_flow.slice(0, 10).forEach(s => {
+                const pctClass = s.change_pct >= 0 ? 'positive' : 'negative';
+                const pctSign = s.change_pct >= 0 ? '+' : '';
+                const flowClass = s.net_inflow >= 0 ? 'positive' : 'negative';
+                const flowSign = s.net_inflow >= 0 ? '+' : '';
+                html += `<tr><td><span class="tag tag-concept">${s.name}</span></td><td class="${pctClass}">${pctSign}${s.change_pct.toFixed(2)}%</td><td class="${flowClass}">${flowSign}${(s.net_inflow / 1e8).toFixed(2)}</td></tr>`;
+            });
+            html += '</tbody></table>';
+            el.innerHTML = html;
+        }
+        
+        function renderSectorVolume() {
+            const el = document.getElementById('sectorVolume');
+            if (!data.sector_volume || data.sector_volume.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            const marketVol = data.market ? data.market.volume : 0;
+            let html = `<p style="margin-bottom:15px;font-size:14px;color:#666">大盘成交额: <strong>${(marketVol / 1e8).toFixed(0)}亿</strong></p>`;
+            html += '<table><thead><tr><th>板块</th><th>成交额(亿)</th><th>占比</th><th>换手率</th><th>涨跌幅</th></tr></thead><tbody>';
+            data.sector_volume.slice(0, 15).forEach(s => {
+                const pct = marketVol > 0 ? (s.volume / marketVol * 100).toFixed(1) : '0';
+                const changeClass = s.change_pct >= 0 ? 'positive' : 'negative';
+                const changeSign = s.change_pct >= 0 ? '+' : '';
+                html += `<tr><td>${s.name}</td><td>${(s.volume / 1e8).toFixed(1)}</td><td>${pct}%</td><td>${s.turnover.toFixed(2)}%</td><td class="${changeClass}">${changeSign}${s.change_pct.toFixed(2)}%</td></tr>`;
+            });
+            html += '</tbody></table>';
+            el.innerHTML = html;
+        }
+        
+        // 首次加载
+        loadData();
+        
+        // 每5分钟自动刷新
+        setInterval(loadData, 5 * 60 * 1000);
+    </script>
+</body>
+</html>
