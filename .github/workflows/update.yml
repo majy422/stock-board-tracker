@@ -1,0 +1,36 @@
+name: Update Stock Data
+
+on:
+  schedule:
+    # 每12小时更新一次：UTC 0:00 和 12:00 (北京时间 8:00 和 20:00)
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        pip install akshare pandas requests
+    
+    - name: Fetch stock data
+      run: |
+        python fetch_data.py
+    
+    - name: Commit and push
+      run: |
+        git config user.name "Stock Tracker Bot"
+        git config user.email "bot@example.com"
+        git add data/
+        git diff --staged --quiet || git commit -m "Update stock data - $(date +'%Y-%m-%d %H:%M')"
+        git push
