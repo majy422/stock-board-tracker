@@ -1,5 +1,5 @@
 {
-  "update_time": "2026-07-09 15:32:38",
+  "update_time": "2026-07-09 09:55:55",
   "zt_stocks": [
     {
       "code": "001395",
@@ -888,181 +888,484 @@
   ],
   "industry_flow": [
     {
-      "name": "电子器件",
-      "code": "new_dzqj",
-      "net_inflow": 13294469870.0,
-      "rise_count": 152,
+      "name": "电子",
+      "code": "BK1201",
+      "net_inflow": 43880214528.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 1.7463636363636
+      "change_pct": 454.0
     },
     {
-      "name": "电子信息",
-      "code": "new_dzxx",
-      "net_inflow": 11265476102.0,
-      "rise_count": 247,
+      "name": "半导体",
+      "code": "BK1036",
+      "net_inflow": 31867711488.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.64468181818182
+      "change_pct": 653.0
     },
     {
-      "name": "机械行业",
-      "code": "new_jxhy",
-      "net_inflow": 5575613791.0,
-      "rise_count": 211,
+      "name": "通信网络设备及器件",
+      "code": "BK1591",
+      "net_inflow": 11693233664.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.56989690721649
+      "change_pct": 461.0
     },
     {
-      "name": "化工行业",
-      "code": "new_hghy",
-      "net_inflow": 4838812481.0,
-      "rise_count": 150,
+      "name": "通信设备",
+      "code": "BK0448",
+      "net_inflow": 10919619584.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.36474820143885
+      "change_pct": 258.0
     },
     {
-      "name": "有色金属",
-      "code": "new_ysjs",
-      "net_inflow": 4673375903.0,
-      "rise_count": 72,
+      "name": "通信",
+      "code": "BK1215",
+      "net_inflow": 10520093440.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.12076923076923
+      "change_pct": 210.0
     },
     {
-      "name": "金融行业",
-      "code": "new_jrhy",
-      "net_inflow": 4175592650.0,
-      "rise_count": 51,
+      "name": "数字芯片设计",
+      "code": "BK1331",
+      "net_inflow": 8378526464.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.062127659574468
+      "change_pct": 549.0
     },
     {
-      "name": "房地产",
-      "code": "new_fdc",
-      "net_inflow": 4058214018.0,
-      "rise_count": 123,
+      "name": "集成电路封测",
+      "code": "BK1328",
+      "net_inflow": 8323472640.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.10040404040404
+      "change_pct": 929.0
     },
     {
-      "name": "生物制药",
-      "code": "new_swzz",
-      "net_inflow": 3753745851.0,
-      "rise_count": 155,
+      "name": "印制电路板",
+      "code": "BK1340",
+      "net_inflow": 6867113728.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": -0.039520547945205
+      "change_pct": 488.0
     },
     {
-      "name": "电力行业",
-      "code": "new_dlhy",
-      "net_inflow": 3505909923.0,
-      "rise_count": 62,
+      "name": "元件",
+      "code": "BK0459",
+      "net_inflow": 6544115712.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.018833333333333
+      "change_pct": 451.0
     },
     {
-      "name": "汽车制造",
-      "code": "new_qczz",
-      "net_inflow": 2613345440.0,
-      "rise_count": 103,
+      "name": "半导体设备",
+      "code": "BK1326",
+      "net_inflow": 5963623680.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.04625
+      "change_pct": 771.0
     },
     {
-      "name": "建筑建材",
-      "code": "new_jzjc",
-      "net_inflow": 2556244788.0,
-      "rise_count": 91,
+      "name": "集成电路制造",
+      "code": "BK1329",
+      "net_inflow": 4644523520.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": -0.090731707317073
+      "change_pct": 897.0
     },
     {
-      "name": "交通运输",
-      "code": "new_jtys",
-      "net_inflow": 2496176876.0,
-      "rise_count": 87,
+      "name": "计算机设备",
+      "code": "BK0735",
+      "net_inflow": 3309024256.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": -0.021866666666667
+      "change_pct": 77.0
     },
     {
-      "name": "钢铁行业",
-      "code": "new_gthy",
-      "net_inflow": 2377404053.0,
-      "rise_count": 60,
+      "name": "消费电子零部件及组装",
+      "code": "BK1338",
+      "net_inflow": 3196442880.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": -0.055769230769231
+      "change_pct": 270.0
     },
     {
-      "name": "家电行业",
-      "code": "new_jdhy",
-      "net_inflow": 2081353292.0,
-      "rise_count": 37,
+      "name": "计算机",
+      "code": "BK1207",
+      "net_inflow": 3170595072.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.1740625
+      "change_pct": 99.0
     },
     {
-      "name": "石油行业",
-      "code": "new_syhy",
-      "net_inflow": 1972207211.0,
-      "rise_count": 24,
+      "name": "消费电子",
+      "code": "BK1037",
+      "net_inflow": 3019245312.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.1152380952381
+      "change_pct": 267.0
     },
     {
-      "name": "电器行业",
-      "code": "new_dqhy",
-      "net_inflow": 1971583252.0,
-      "rise_count": 58,
+      "name": "半导体材料",
+      "code": "BK1325",
+      "net_inflow": 2937654272.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.11074074074074
+      "change_pct": 969.0
     },
     {
-      "name": "发电设备",
-      "code": "new_fdsb",
-      "net_inflow": 1960715706.0,
-      "rise_count": 65,
+      "name": "其他计算机设备",
+      "code": "BK1446",
+      "net_inflow": 2924421376.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.051694915254237
+      "change_pct": 108.0
     },
     {
-      "name": "商业百货",
-      "code": "new_sybh",
-      "net_inflow": 1842384553.0,
-      "rise_count": 93,
+      "name": "光学光电子",
+      "code": "BK1038",
+      "net_inflow": 2150900224.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": -0.085487804878049
+      "change_pct": 313.0
     },
     {
-      "name": "煤炭行业",
-      "code": "new_mthy",
-      "net_inflow": 1650406927.0,
-      "rise_count": 41,
+      "name": "机械设备",
+      "code": "BK1205",
+      "net_inflow": 1071010048.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": -0.16153846153846
+      "change_pct": 95.0
     },
     {
-      "name": "其它行业",
-      "code": "new_qtxy",
-      "net_inflow": 1445572084.0,
-      "rise_count": 202,
+      "name": "模拟芯片设计",
+      "code": "BK1330",
+      "net_inflow": 1067697344.0,
+      "rise_count": 0,
       "fall_count": 0,
-      "change_pct": 0.031992248062016
+      "change_pct": 372.0
     }
   ],
-  "concept_flow": [],
-  "sector_volume": [],
+  "concept_flow": [
+    {
+      "name": "科技风格",
+      "code": "BK1713",
+      "net_inflow": 46484799488.0,
+      "change_pct": 703.0
+    },
+    {
+      "name": "国产芯片",
+      "code": "BK0891",
+      "net_inflow": 39700873216.0,
+      "change_pct": 382.0
+    },
+    {
+      "name": "MSCI中国",
+      "code": "BK0821",
+      "net_inflow": 34174664704.0,
+      "change_pct": 158.0
+    },
+    {
+      "name": "半导体概念",
+      "code": "BK0917",
+      "net_inflow": 34141147136.0,
+      "change_pct": 431.0
+    },
+    {
+      "name": "百元股",
+      "code": "BK1059",
+      "net_inflow": 33673109504.0,
+      "change_pct": 535.0
+    },
+    {
+      "name": "大盘股",
+      "code": "BK1663",
+      "net_inflow": 29809397760.0,
+      "change_pct": 170.0
+    },
+    {
+      "name": "存储芯片",
+      "code": "BK1137",
+      "net_inflow": 29462339584.0,
+      "change_pct": 693.0
+    },
+    {
+      "name": "通信技术",
+      "code": "BK1650",
+      "net_inflow": 26168827904.0,
+      "change_pct": 305.0
+    },
+    {
+      "name": "HS300_",
+      "code": "BK0500",
+      "net_inflow": 26068148224.0,
+      "change_pct": 109.0
+    },
+    {
+      "name": "大盘成长",
+      "code": "BK1665",
+      "net_inflow": 24404070400.0,
+      "change_pct": 477.0
+    },
+    {
+      "name": "融资融券",
+      "code": "BK0596",
+      "net_inflow": 24009080832.0,
+      "change_pct": 78.0
+    },
+    {
+      "name": "富时罗素",
+      "code": "BK0867",
+      "net_inflow": 23697993728.0,
+      "change_pct": 44.0
+    },
+    {
+      "name": "东方财富热股",
+      "code": "BK1637",
+      "net_inflow": 22577782784.0,
+      "change_pct": 260.0
+    },
+    {
+      "name": "人工智能",
+      "code": "BK0800",
+      "net_inflow": 21152260096.0,
+      "change_pct": 111.0
+    },
+    {
+      "name": "算力概念",
+      "code": "BK1134",
+      "net_inflow": 20304658432.0,
+      "change_pct": 183.0
+    },
+    {
+      "name": "物联网",
+      "code": "BK0554",
+      "net_inflow": 19944112128.0,
+      "change_pct": 134.0
+    },
+    {
+      "name": "标准普尔",
+      "code": "BK0879",
+      "net_inflow": 19724996608.0,
+      "change_pct": 22.0
+    },
+    {
+      "name": "5G概念",
+      "code": "BK0714",
+      "net_inflow": 19488829440.0,
+      "change_pct": 275.0
+    },
+    {
+      "name": "CPO概念",
+      "code": "BK1128",
+      "net_inflow": 16934420480.0,
+      "change_pct": 544.0
+    },
+    {
+      "name": "深成500",
+      "code": "BK0568",
+      "net_inflow": 16707563520.0,
+      "change_pct": 104.0
+    }
+  ],
+  "sector_volume": [
+    {
+      "name": "半导体材料",
+      "volume": 75571208832.0,
+      "change_pct": 969.0,
+      "turnover": 897.0
+    },
+    {
+      "name": "集成电路封测",
+      "volume": 62723179915.0,
+      "change_pct": 929.0,
+      "turnover": 1214.0
+    },
+    {
+      "name": "集成电路制造",
+      "volume": 56854476485.0,
+      "change_pct": 897.0,
+      "turnover": 586.0
+    },
+    {
+      "name": "橡胶助剂",
+      "volume": 3367929116.0,
+      "change_pct": 892.0,
+      "turnover": 732.0
+    },
+    {
+      "name": "半导体设备",
+      "volume": 87178201894.0,
+      "change_pct": 771.0,
+      "turnover": 533.0
+    },
+    {
+      "name": "半导体",
+      "volume": 592537551906.0,
+      "change_pct": 653.0,
+      "turnover": 689.0
+    },
+    {
+      "name": "数字芯片设计",
+      "volume": 238852099787.0,
+      "change_pct": 549.0,
+      "turnover": 538.0
+    },
+    {
+      "name": "文字媒体",
+      "volume": 2204954227.0,
+      "change_pct": 508.0,
+      "turnover": 867.0
+    },
+    {
+      "name": "分立器件",
+      "volume": 44402285455.0,
+      "change_pct": 500.0,
+      "turnover": 776.0
+    },
+    {
+      "name": "印制电路板",
+      "volume": 115853934806.0,
+      "change_pct": 488.0,
+      "turnover": 598.0
+    },
+    {
+      "name": "电子化学品Ⅲ",
+      "volume": 65247445218.0,
+      "change_pct": 464.0,
+      "turnover": 896.0
+    },
+    {
+      "name": "电子化学品Ⅱ",
+      "volume": 65247445218.0,
+      "change_pct": 464.0,
+      "turnover": 896.0
+    },
+    {
+      "name": "通信网络设备及器件",
+      "volume": 160058380796.0,
+      "change_pct": 461.0,
+      "turnover": 643.0
+    },
+    {
+      "name": "电子",
+      "volume": 1040613545321.0,
+      "change_pct": 454.0,
+      "turnover": 590.0
+    },
+    {
+      "name": "元件",
+      "volume": 150825745252.0,
+      "change_pct": 451.0,
+      "turnover": 621.0
+    },
+    {
+      "name": "激光设备",
+      "volume": 21670606548.0,
+      "change_pct": 424.0,
+      "turnover": 520.0
+    },
+    {
+      "name": "航天装备Ⅲ",
+      "volume": 9503046416.0,
+      "change_pct": 419.0,
+      "turnover": 264.0
+    },
+    {
+      "name": "航天装备Ⅱ",
+      "volume": 9503046416.0,
+      "change_pct": 419.0,
+      "turnover": 264.0
+    },
+    {
+      "name": "玻纤制造",
+      "volume": 30386618309.0,
+      "change_pct": 382.0,
+      "turnover": 648.0
+    },
+    {
+      "name": "光学元件",
+      "volume": 22324597949.0,
+      "change_pct": 375.0,
+      "turnover": 566.0
+    },
+    {
+      "name": "模拟芯片设计",
+      "volume": 26956099535.0,
+      "change_pct": 372.0,
+      "turnover": 425.0
+    },
+    {
+      "name": "被动元件",
+      "volume": 34971810445.0,
+      "change_pct": 360.0,
+      "turnover": 691.0
+    },
+    {
+      "name": "其他电子Ⅲ",
+      "volume": 32904718575.0,
+      "change_pct": 351.0,
+      "turnover": 608.0
+    },
+    {
+      "name": "其他电子Ⅱ",
+      "volume": 32904718575.0,
+      "change_pct": 351.0,
+      "turnover": 608.0
+    },
+    {
+      "name": "通信线缆及配套",
+      "volume": 57186385329.0,
+      "change_pct": 351.0,
+      "turnover": 974.0
+    },
+    {
+      "name": "有机硅",
+      "volume": 11067924792.0,
+      "change_pct": 345.0,
+      "turnover": 853.0
+    },
+    {
+      "name": "油气及炼化工程",
+      "volume": 4026707678.0,
+      "change_pct": 339.0,
+      "turnover": 367.0
+    },
+    {
+      "name": "光学光电子",
+      "volume": 98135067647.0,
+      "change_pct": 313.0,
+      "turnover": 667.0
+    },
+    {
+      "name": "面板",
+      "volume": 60903983522.0,
+      "change_pct": 308.0,
+      "turnover": 703.0
+    },
+    {
+      "name": "粘胶",
+      "volume": 819881476.0,
+      "change_pct": 298.0,
+      "turnover": 468.0
+    }
+  ],
   "market": {
-    "date": "2026-07-08",
-    "volume": 49622937400.0,
-    "close": 3970.88,
-    "change_pct": -0.4850591506515234
+    "date": "2026-07-09",
+    "volume": 55306398000.0,
+    "close": 4036.588,
+    "change_pct": 1.654746554919817
   },
   "summary": {
-    "date": "2026-07-08",
+    "date": "2026-07-09",
     "total_zt": 68,
     "key_points": [
       "🔥 涨停股集中板块：半导体(10只)、电子元件(6只)、其他电源设备(4只)、通用设备(3只)、光学光电子(3只)",
-      "💰 主力资金流入前三：电子器件(132.9亿)、电子信息(112.7亿)、机械行业(55.8亿)",
-      "📊 大盘📉 下跌0.49%，成交额496亿"
+      "💰 主力资金流入前三：电子(438.8亿)、半导体(318.7亿)、通信网络设备及器件(116.9亿)",
+      "🎯 概念板块涨幅前三：科技风格(+703.00%)、存储芯片(+693.00%)、CPO概念(+544.00%)",
+      "📊 大盘📈 上涨1.65%，成交额553亿"
     ]
   }
 }
