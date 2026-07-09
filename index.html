@@ -7,7 +7,11 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f7fa; color: #333; }
-        .header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 30px 20px; text-align: center; }
+        .tabs { display: flex; background: white; border-bottom: 2px solid #eee; margin-bottom: 20px; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .tab { flex: 1; padding: 15px; text-align: center; cursor: pointer; font-weight: 500; color: #666; border-bottom: 3px solid transparent; transition: all 0.2s; }
+        .tab:hover { background: #f8f9fa; }
+        .tab.active { color: #667eea; border-bottom-color: #a8c0ff; background: #f5f7ff; }
+        .header { background: linear-gradient(135deg, #a8c0ff, #d4b8ff); color: #333; padding: 30px 20px; text-align: center; }
         .header h1 { font-size: 28px; margin-bottom: 10px; }
         .header .update-time { font-size: 14px; opacity: 0.9; }
         .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
@@ -17,21 +21,21 @@
         .summary li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 15px; }
         .summary li:last-child { border-bottom: none; }
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); overflow: hidden; }
-        .card-header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 15px 20px; font-size: 16px; font-weight: 600; }
-        .card-body { padding: 15px; max-height: 500px; overflow-y: auto; }
-        table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .card-header { background: linear-gradient(135deg, #a8c0ff, #d4b8ff); color: #333; padding: 15px 20px; font-size: 16px; font-weight: 600; }
+        .card-body { padding: 15px; }
+        table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: auto; }
         th { background: #f8f9fa; padding: 10px; text-align: left; font-weight: 600; position: sticky; top: 0; }
-        td { padding: 10px; border-bottom: 1px solid #f0f0f0; }
+        td { padding: 10px; border-bottom: 1px solid #f0f0f0; white-space: normal; word-break: break-all; }
         tr:hover { background: #f8f9fa; }
         .positive { color: #e74c3c; }
         .negative { color: #27ae60; }
-        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; }
+        .tag { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-right: 4px; white-space: nowrap; }
         .tag-industry { background: #e3f2fd; color: #1565c0; }
         .tag-concept { background: #f3e5f5; color: #7b1fa2; }
         .loading { text-align: center; padding: 40px; color: #999; }
-        .refresh-btn { position: fixed; bottom: 30px; right: 30px; background: #667eea; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 15px rgba(102,126,234,0.4); }
-        .refresh-btn:hover { background: #5a6fd6; }
+        .refresh-btn { position: fixed; bottom: 30px; right: 30px; background: #a8c0ff; color: #333; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; box-shadow: 0 4px 15px rgba(168,192,255,0.5); }
+        .refresh-btn:hover { background: #90b0f0; }
         @media (max-width: 768px) {
             .grid { grid-template-columns: 1fr; }
             .header h1 { font-size: 22px; }
@@ -45,37 +49,87 @@
     </div>
     
     <div class="container">
-        <div class="summary" id="summary">
-            <h2>📊 今日要点</h2>
-            <div class="loading">加载中...</div>
+        <div class="tabs" id="mainTabs">
+            <div class="tab active" data-tab="overview" onclick="switchTab('overview')">📊 概览</div>
+            <div class="tab" data-tab="analysis" onclick="switchTab('analysis')">📈 分析</div>
         </div>
         
-        <div class="grid">
-            <div class="card">
-                <div class="card-header">🔥 涨停股分布（非ST科创）</div>
-                <div class="card-body" id="ztStocks">
-                    <div class="loading">加载中...</div>
-                </div>
+        <div id="overviewContent">
+            <div class="summary" id="summary">
+                <h2>📊 今日要点 <span id="summaryDate" style="font-size:14px;color:#666;font-weight:normal"></span></h2>
+                <div class="loading">加载中...</div>
             </div>
             
-            <div class="card">
-                <div class="card-header">💰 行业板块资金流向 TOP10</div>
-                <div class="card-body" id="industryFlow">
-                    <div class="loading">加载中...</div>
-                </div>
+            <div style="display:flex;align-items:center;gap:15px;margin-bottom:20px;background:white;padding:15px 20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1)">
+                <span style="font-size:14px;color:#666">选择日期：</span>
+                <select id="dateSelect" onchange="loadData(this.value)" style="padding:8px 12px;border-radius:8px;border:1px solid #ddd;font-size:14px">
+                    <option value="latest">最新数据</option>
+                </select>
+                <span id="dateInfo" style="font-size:13px;color:#999"></span>
+                <button onclick="exportToExcel()" style="margin-left:auto;padding:8px 16px;background:#4caf50;color:white;border:none;border-radius:6px;cursor:pointer;font-size:13px">📥 导出Excel</button>
             </div>
             
-            <div class="card">
-                <div class="card-header">🎯 概念板块涨幅 TOP10</div>
-                <div class="card-body" id="conceptFlow">
-                    <div class="loading">加载中...</div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">🔥 涨停股分布（非ST科创）</div>
+                    <div class="card-body" id="ztStocks">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">💰 行业板块资金流向 TOP10</div>
+                    <div class="card-body" id="industryFlow">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">🎯 概念板块涨幅 TOP10</div>
+                    <div class="card-body" id="conceptFlow">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">📊 板块成交量 vs 大盘</div>
+                    <div class="card-body" id="sectorVolume">
+                        <div class="loading">加载中...</div>
+                    </div>
                 </div>
             </div>
+        </div>
+        
+        <div id="analysisContent" style="display:none">
+
             
-            <div class="card">
-                <div class="card-header">📊 板块成交量 vs 大盘</div>
-                <div class="card-body" id="sectorVolume">
-                    <div class="loading">加载中...</div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-header">🏆 连板股统计</div>
+                    <div class="card-body" id="continuousBoard">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">🎯 涨停原因归类</div>
+                    <div class="card-body" id="ztReason">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">📊 市场情绪指标</div>
+                    <div class="card-body" id="sentiment">
+                        <div class="loading">加载中...</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="card-header">📈 涨停封单量排名</div>
+                    <div class="card-body" id="sealRank">
+                        <div class="loading">加载中...</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,17 +138,68 @@
     <button class="refresh-btn" onclick="loadData()" title="刷新数据">🔄</button>
 
     <script>
-        let data = null;
+        // GitHub Pages 数据源 - 部署后改这里
+        const DATA_BASE = 'data'; // GitHub Pages 上的相对路径
         
-        async function loadData() {
+        let data = null;
+        let availableDates = [];
+        
+
+        async function loadAvailableDates() {
             try {
-                const response = await fetch('data/latest.json?t=' + Date.now());
+                const response = await fetch(DATA_BASE + '/dates.json?t=' + Date.now());
+                if (response.ok) {
+                    const dates = await response.json();
+                    const select = document.getElementById('dateSelect');
+                    dates.forEach(date => {
+                        const option = document.createElement('option');
+                        option.value = date;
+                        option.textContent = date;
+                        select.appendChild(option);
+                    });
+                }
+            } catch (e) {
+                console.log('加载日期列表失败:', e);
+            }
+        }
+        
+        async function loadData(date = 'latest') {
+            try {
+                const fileDate = date === 'latest' ? 'latest' : date.replace(/-/g, '');
+                const url = DATA_BASE + '/' + fileDate + '.json';
+                const response = await fetch(url + '?t=' + Date.now());
                 if (!response.ok) throw new Error('数据加载失败');
                 data = await response.json();
                 renderAll();
+                
+                const dateInfo = document.getElementById('dateInfo');
+                if (data.summary && data.summary.date) {
+                    dateInfo.textContent = `数据日期: ${data.summary.date}`;
+                }
+                
+                const select = document.getElementById('dateSelect');
+                if (date !== 'latest') {
+                    select.value = date;
+                } else {
+                    select.value = 'latest';
+                }
+
             } catch (e) {
                 console.error('加载数据出错:', e);
                 document.getElementById('updateTime').textContent = '数据加载失败，请检查网络连接';
+            }
+        }
+        
+        // Tab切换
+        function switchTab(tab) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelector(`[data-tab="${tab}"]`).classList.add('active');
+            
+            document.getElementById('overviewContent').style.display = tab === 'overview' ? 'block' : 'none';
+            document.getElementById('analysisContent').style.display = tab === 'analysis' ? 'block' : 'none';
+            
+            if (tab === 'analysis' && data) {
+                renderAnalysis();
             }
         }
         
@@ -102,22 +207,227 @@
             if (!data) return;
             
             // 更新时间
-            document.getElementById('updateTime').textContent = `最后更新: ${data.update_time}`;
+            const dateStr = data.summary && data.summary.date ? data.summary.date : '未知';
+            document.getElementById('updateTime').textContent = `数据日期: ${dateStr} | 最后更新: ${data.update_time}`;
+            if (data.summary && data.summary.date) {
+                document.getElementById('summaryDate').textContent = data.summary.date;
+            }
             
-            // 渲染总结
+            // 渲染概览页
             renderSummary();
-            
-            // 渲染涨停股
             renderZtStocks();
-            
-            // 渲染行业资金流向
             renderIndustryFlow();
-            
-            // 渲染概念板块
             renderConceptFlow();
-            
-            // 渲染成交量
             renderSectorVolume();
+            
+            // 如果分析页可见，也渲染
+            if (document.getElementById('analysisContent').style.display !== 'none') {
+                renderAnalysis();
+            }
+        }
+        
+        function renderAnalysis() {
+            if (!data || !data.zt_stocks) return;
+            renderContinuousBoard();
+            renderZtReason();
+            renderSentiment();
+            renderSealRank();
+        }
+        
+        function renderContinuousBoard() {
+            const el = document.getElementById('continuousBoard');
+            if (!data.zt_stocks || data.zt_stocks.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            const grouped = {};
+            data.zt_stocks.forEach(s => {
+                const level = s.continuous || 1;
+                if (!grouped[level]) grouped[level] = [];
+                grouped[level].push(s);
+            });
+            
+            let html = '';
+            Object.keys(grouped).sort((a, b) => b - a).forEach(level => {
+                const stocks = grouped[level];
+                const label = level > 1 ? `<span style="color:#e74c3c;font-weight:bold">${level}连板</span>` : '首板';
+                html += `<div style="margin-bottom:15px">`;
+                html += `<div style="font-size:14px;font-weight:600;margin-bottom:8px">${label} (${stocks.length}只)</div>`;
+                html += `<div style="display:flex;flex-wrap:wrap;gap:8px">`;
+                stocks.forEach(s => {
+                    html += `<span style="padding:4px 10px;background:#f8f9fa;border-radius:6px;font-size:13px">${s.name} <span style="color:#999">${s.industry}</span></span>`;
+                });
+                html += `</div></div>`;
+            });
+            
+            el.innerHTML = html || '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+        }
+        
+        function renderZtReason() {
+            const el = document.getElementById('ztReason');
+            if (!data.zt_stocks || data.zt_stocks.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            // 按行业归类涨停原因
+            const grouped = {};
+            data.zt_stocks.forEach(s => {
+                const industry = s.industry || '其他';
+                if (!grouped[industry]) grouped[industry] = [];
+                grouped[industry].push(s);
+            });
+            
+            let html = '<table><thead><tr><th>板块</th><th>涨停股</th><th>数量</th><th>占比</th></tr></thead><tbody>';
+            Object.entries(grouped).sort((a, b) => b[1].length - a[1].length).forEach(([industry, stocks]) => {
+                const pct = (stocks.length / data.zt_stocks.length * 100).toFixed(1);
+                html += `<tr><td>${industry}</td><td>${stocks.map(s => s.name).join('、')}</td><td>${stocks.length}</td><td>${pct}%</td></tr>`;
+            });
+            html += '</tbody></table>';
+            
+            el.innerHTML = html;
+        }
+        
+        function renderSentiment() {
+            const el = document.getElementById('sentiment');
+            if (!data.zt_stocks || data.zt_stocks.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            const ztCount = data.zt_stocks.length;
+            const maxContinuous = Math.max(...data.zt_stocks.map(s => s.continuous || 1));
+            const continuousCount = data.zt_stocks.filter(s => (s.continuous || 1) > 1).length;
+            
+            // 情绪评分 (简单计算)
+            let score = 0;
+            if (ztCount >= 50) score += 3;
+            else if (ztCount >= 30) score += 2;
+            else if (ztCount >= 10) score += 1;
+            
+            if (maxContinuous >= 5) score += 3;
+            else if (maxContinuous >= 3) score += 2;
+            else if (maxContinuous >= 2) score += 1;
+            
+            let level = '';
+            let color = '';
+            if (score >= 5) { level = '🔥 极度亢奋'; color = '#e74c3c'; }
+            else if (score >= 3) { level = '📈 情绪高涨'; color = '#ff9800'; }
+            else if (score >= 1) { level = '😐 情绪一般'; color = '#2196f3'; }
+            else { level = '📉 情绪低迷'; color = '#999'; }
+            
+            let html = `
+                <div style="text-align:center;padding:20px">
+                    <div style="font-size:48px;margin-bottom:10px">${level.split(' ')[0]}</div>
+                    <div style="font-size:18px;font-weight:bold;color:${color};margin-bottom:20px">${level.split(' ')[1]}</div>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:15px;text-align:center">
+                        <div style="padding:15px;background:#f8f9fa;border-radius:8px">
+                            <div style="font-size:24px;font-weight:bold;color:#e74c3c">${ztCount}</div>
+                            <div style="font-size:12px;color:#666;margin-top:5px">涨停家数</div>
+                        </div>
+                        <div style="padding:15px;background:#f8f9fa;border-radius:8px">
+                            <div style="font-size:24px;font-weight:bold;color:#ff9800">${maxContinuous}</div>
+                            <div style="font-size:12px;color:#666;margin-top:5px">最高连板</div>
+                        </div>
+                        <div style="padding:15px;background:#f8f9fa;border-radius:8px">
+                            <div style="font-size:24px;font-weight:bold;color:#2196f3">${continuousCount}</div>
+                            <div style="font-size:12px;color:#666;margin-top:5px">连板股数</div>
+                        </div>
+                        <div style="padding:15px;background:#f8f9fa;border-radius:8px">
+                            <div style="font-size:24px;font-weight:bold;color:#4caf50">${data.market ? data.market.change_pct.toFixed(2) + '%' : '-'}</div>
+                            <div style="font-size:12px;color:#666;margin-top:5px">大盘涨跌</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            el.innerHTML = html;
+        }
+        
+        function renderSealRank() {
+            const el = document.getElementById('sealRank');
+            if (!data.zt_stocks || data.zt_stocks.length === 0) {
+                el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
+                return;
+            }
+            
+            // 按封单金额排序
+            const sorted = [...data.zt_stocks].sort((a, b) => (b.seal_amount || 0) - (a.seal_amount || 0));
+            
+            let html = '<table><thead><tr><th>排名</th><th>代码</th><th>名称</th><th>封单金额(万)</th><th>成交额(万)</th><th>连板</th></tr></thead><tbody>';
+            sorted.slice(0, 15).forEach((s, i) => {
+                const sealAmount = s.seal_amount ? (s.seal_amount / 10000).toFixed(0) : '-';
+                const amount = (s.amount / 10000).toFixed(0);
+                const continuous = s.continuous > 1 ? `<span style="color:#e74c3c;font-weight:bold">${s.continuous}板</span>` : '首板';
+                const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : (i + 1);
+                html += `<tr><td>${medal}</td><td>${s.code}</td><td><strong>${s.name}</strong></td><td>${sealAmount}</td><td>${amount}</td><td>${continuous}</td></tr>`;
+            });
+            html += '</tbody></table>';
+            
+            el.innerHTML = html;
+        }
+        
+        function exportToExcel() {
+            if (!data) {
+                alert('暂无数据可导出');
+                return;
+            }
+            
+            const hasData = (data.zt_stocks && data.zt_stocks.length > 0) ||
+                           (data.industry_flow && data.industry_flow.length > 0) ||
+                           (data.concept_flow && data.concept_flow.length > 0) ||
+                           (data.sector_volume && data.sector_volume.length > 0) ||
+                           data.market;
+            
+            if (!hasData) {
+                alert('暂无数据可导出');
+                return;
+            }
+            
+            exportToCSV();
+        }
+        
+        function exportToCSV() {
+            // 前端降级方案
+            let csv = '\uFEFF';
+            if (data.zt_stocks && data.zt_stocks.length > 0) {
+                csv += '【涨停股数据】\n股票代码,股票名称,行业板块,涨跌幅(%),成交额(万),换手率(%),连板数,首次封板时间,封单金额(万)\n';
+                data.zt_stocks.forEach(s => {
+                    csv += [s.code, s.name, s.industry||'', s.change_pct.toFixed(2), (s.amount/10000).toFixed(0), s.turnover.toFixed(2), s.continuous||1, s.first_time||'', s.seal_amount?(s.seal_amount/10000).toFixed(0):''].join(',') + '\n';
+                });
+                csv += '\n';
+            }
+            if (data.industry_flow && data.industry_flow.length > 0) {
+                csv += '【行业板块资金流向】\n板块名称,主力净流入(亿),涨跌幅(%),上涨家数,下跌家数\n';
+                data.industry_flow.forEach(s => {
+                    csv += [s.name, (s.net_inflow/1e8).toFixed(2), s.change_pct.toFixed(2), s.rise_count, s.fall_count].join(',') + '\n';
+                });
+                csv += '\n';
+            }
+            if (data.concept_flow && data.concept_flow.length > 0) {
+                csv += '【概念板块涨幅】\n概念名称,涨跌幅(%),主力净流入(亿)\n';
+                data.concept_flow.forEach(s => {
+                    csv += [s.name, s.change_pct.toFixed(2), (s.net_inflow/1e8).toFixed(2)].join(',') + '\n';
+                });
+                csv += '\n';
+            }
+            if (data.sector_volume && data.sector_volume.length > 0) {
+                csv += '【板块成交量】\n板块名称,成交额(亿),涨跌幅(%),换手率(%)\n';
+                data.sector_volume.forEach(s => {
+                    csv += [s.name, (s.volume/1e8).toFixed(2), s.change_pct.toFixed(2), s.turnover.toFixed(2)].join(',') + '\n';
+                });
+                csv += '\n';
+            }
+            if (data.market) {
+                csv += '【大盘数据】\n日期,收盘价,涨跌幅(%),成交额(亿)\n';
+                csv += [data.market.date, data.market.close.toFixed(2), data.market.change_pct.toFixed(2), (data.market.volume/1e8).toFixed(0)].join(',') + '\n';
+            }
+            const blob = new Blob([csv], {type:'text/csv;charset=utf-8;'});
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = `股票板块数据_${data.summary?data.summary.date:'unknown'}.csv`;
+            a.click();
         }
         
         function renderSummary() {
@@ -155,6 +465,25 @@
         function renderIndustryFlow() {
             const el = document.getElementById('industryFlow');
             if (!data.industry_flow || data.industry_flow.length === 0) {
+                // 显示涨停股行业分布作为替代
+                if (data.zt_stocks && data.zt_stocks.length > 0) {
+                    const grouped = {};
+                    data.zt_stocks.forEach(s => {
+                        const key = s.industry || '未知';
+                        if (!grouped[key]) grouped[key] = 0;
+                        grouped[key]++;
+                    });
+                    const sorted = Object.entries(grouped).sort((a, b) => b[1] - a[1]);
+                    let html = '<p style="margin-bottom:10px;font-size:13px;color:#666">📈 涨停股行业分布（共' + data.zt_stocks.length + '只）</p>';
+                    html += '<table><thead><tr><th>行业</th><th>涨停数</th><th>占比</th></tr></thead><tbody>';
+                    sorted.forEach(([name, count]) => {
+                        const pct = (count / data.zt_stocks.length * 100).toFixed(1);
+                        html += '<tr><td>' + name + '</td><td><strong>' + count + '</strong>只</td><td>' + pct + '%</td></tr>';
+                    });
+                    html += '</tbody></table>';
+                    el.innerHTML = html;
+                    return;
+                }
                 el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
                 return;
             }
@@ -174,6 +503,27 @@
         function renderConceptFlow() {
             const el = document.getElementById('conceptFlow');
             if (!data.concept_flow || data.concept_flow.length === 0) {
+                // 显示涨停股详情作为替代
+                if (data.zt_stocks && data.zt_stocks.length > 0) {
+                    let html = '<p style="margin-bottom:10px;font-size:13px;color:#666">🔥 今日涨停股明细</p>';
+                    html += '<table><thead><tr><th>代码</th><th>名称</th><th>行业</th><th>涨幅</th><th>成交额(万)</th><th>连板</th><th>封板时间</th></tr></thead><tbody>';
+                    data.zt_stocks.slice(0, 15).forEach(s => {
+                        const continuous = s.continuous > 1 ? '<span style="color:#e74c3c;font-weight:bold">' + s.continuous + '板</span>' : '首板';
+                        const firstTime = s.first_time ? s.first_time.replace(/^(\d{2})(\d{2})(\d{2})$/, '$1:$2:$3') : '-';
+                        html += '<tr>';
+                        html += '<td>' + s.code + '</td>';
+                        html += '<td><strong>' + s.name + '</strong></td>';
+                        html += '<td><span class="tag tag-industry">' + (s.industry || '-') + '</span></td>';
+                        html += '<td class="positive">+' + s.change_pct.toFixed(2) + '%</td>';
+                        html += '<td>' + (s.amount / 10000).toFixed(0) + '</td>';
+                        html += '<td>' + continuous + '</td>';
+                        html += '<td>' + firstTime + '</td>';
+                        html += '</tr>';
+                    });
+                    html += '</tbody></table>';
+                    el.innerHTML = html;
+                    return;
+                }
                 el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
                 return;
             }
@@ -193,6 +543,27 @@
         function renderSectorVolume() {
             const el = document.getElementById('sectorVolume');
             if (!data.sector_volume || data.sector_volume.length === 0) {
+                // 显示大盘数据
+                if (data.market && data.market.volume) {
+                    let html = '<p style="margin-bottom:15px;font-size:14px">📊 大盘概况</p>';
+                    html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:15px">';
+                    html += '<div style="padding:15px;background:#f8f9fa;border-radius:8px">';
+                    html += '<div style="font-size:13px;color:#666">上证指数</div>';
+                    html += '<div style="font-size:24px;font-weight:bold;margin-top:5px">' + data.market.close.toFixed(2) + '</div>';
+                    const pctClass = data.market.change_pct >= 0 ? 'positive' : 'negative';
+                    const pctSign = data.market.change_pct >= 0 ? '+' : '';
+                    html += '<div class="' + pctClass + '" style="font-size:14px;margin-top:5px">' + pctSign + data.market.change_pct.toFixed(2) + '%</div>';
+                    html += '</div>';
+                    html += '<div style="padding:15px;background:#f8f9fa;border-radius:8px">';
+                    html += '<div style="font-size:13px;color:#666">成交额</div>';
+                    const vol = data.market.volume / 1e8;
+                    html += '<div style="font-size:24px;font-weight:bold;margin-top:5px">' + vol.toFixed(0) + '亿</div>';
+                    html += '<div style="font-size:12px;color:#999;margin-top:5px">' + data.market.date + '</div>';
+                    html += '</div>';
+                    html += '</div>';
+                    el.innerHTML = html;
+                    return;
+                }
                 el.innerHTML = '<p style="text-align:center;color:#999;padding:20px">暂无数据</p>';
                 return;
             }
@@ -211,10 +582,11 @@
         }
         
         // 首次加载
+        loadAvailableDates();
         loadData();
         
         // 每5分钟自动刷新
-        setInterval(loadData, 5 * 60 * 1000);
+        setInterval(() => loadData(document.getElementById('dateSelect').value), 5 * 60 * 1000);
     </script>
 </body>
 </html>
