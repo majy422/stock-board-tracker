@@ -1,0 +1,1397 @@
+{
+  "update_time": "2026-10-28 17:57:52",
+  "zt_stocks": [
+    {
+      "code": "001219",
+      "name": "青岛食品",
+      "price": 16.48,
+      "change_pct": 10.013350486755371,
+      "amount": 55085224.0,
+      "turnover": 1.7574100494384766,
+      "industry": "休闲食品",
+      "reason": "3/3",
+      "continuous": 3,
+      "first_time": "092500",
+      "seal_amount": 184886648.0
+    },
+    {
+      "code": "002636",
+      "name": "金安国纪",
+      "price": 58.59,
+      "change_pct": 10.0075101852417,
+      "amount": 1598783040.0,
+      "turnover": 3.7655885219573975,
+      "industry": "电子元件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "092500",
+      "seal_amount": 327148983.0
+    },
+    {
+      "code": "002708",
+      "name": "光洋股份",
+      "price": 18.94,
+      "change_pct": 9.988385200500488,
+      "amount": 358318544.0,
+      "turnover": 3.7126829624176025,
+      "industry": "汽车零部件",
+      "reason": "3/3",
+      "continuous": 3,
+      "first_time": "093000",
+      "seal_amount": 177563636.0
+    },
+    {
+      "code": "301488",
+      "name": "豪恩汽电",
+      "price": 97.87,
+      "change_pct": 19.997547149658203,
+      "amount": 245557404.0,
+      "turnover": 6.0277886390686035,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093000",
+      "seal_amount": 76634950.0
+    },
+    {
+      "code": "603006",
+      "name": "联明股份",
+      "price": 10.74,
+      "change_pct": 10.040983200073242,
+      "amount": 30189590.0,
+      "turnover": 1.1057828664779663,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093002",
+      "seal_amount": 76174524.0
+    },
+    {
+      "code": "603897",
+      "name": "长城科技",
+      "price": 26.43,
+      "change_pct": 9.987516403198242,
+      "amount": 83457089.0,
+      "turnover": 1.5358895063400269,
+      "industry": "电网设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093005",
+      "seal_amount": 54656182.0
+    },
+    {
+      "code": "601956",
+      "name": "东贝集团",
+      "price": 6.09,
+      "change_pct": 9.9277982711792,
+      "amount": 198986298.0,
+      "turnover": 5.2971343994140625,
+      "industry": "家电零部",
+      "reason": "2/2",
+      "continuous": 2,
+      "first_time": "093017",
+      "seal_amount": 101365187.0
+    },
+    {
+      "code": "603612",
+      "name": "索通发展",
+      "price": 15.88,
+      "change_pct": 9.972298622131348,
+      "amount": 265281817.0,
+      "turnover": 3.359867811203003,
+      "industry": "非金属材",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093017",
+      "seal_amount": 31399524.0
+    },
+    {
+      "code": "003028",
+      "name": "振邦智能",
+      "price": 25.91,
+      "change_pct": 10.021231651306152,
+      "amount": 105873000.0,
+      "turnover": 5.903496742248535,
+      "industry": "家电零部",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093115",
+      "seal_amount": 23842200.0
+    },
+    {
+      "code": "600078",
+      "name": "澄星股份",
+      "price": 9.42,
+      "change_pct": 10.04672908782959,
+      "amount": 298042016.0,
+      "turnover": 4.806641101837158,
+      "industry": "农用化工",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093133",
+      "seal_amount": 13683124.0
+    },
+    {
+      "code": "002164",
+      "name": "宁波东力",
+      "price": 16.9,
+      "change_pct": 10.026041030883789,
+      "amount": 453855648.0,
+      "turnover": 5.69135046005249,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093139",
+      "seal_amount": 102811420.0
+    },
+    {
+      "code": "000678",
+      "name": "襄阳轴承",
+      "price": 17.61,
+      "change_pct": 9.993753433227539,
+      "amount": 826162176.0,
+      "turnover": 10.383087158203125,
+      "industry": "汽车零部件",
+      "reason": "5/5",
+      "continuous": 5,
+      "first_time": "093215",
+      "seal_amount": 291735501.0
+    },
+    {
+      "code": "301359",
+      "name": "东南电子",
+      "price": 19.08,
+      "change_pct": 20.0,
+      "amount": 69051581.0,
+      "turnover": 5.247707366943359,
+      "industry": "其他电源设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093215",
+      "seal_amount": 27465888.0
+    },
+    {
+      "code": "300613",
+      "name": "富瀚微",
+      "price": 72.48,
+      "change_pct": 20.0,
+      "amount": 1059221248.0,
+      "turnover": 6.7898077964782715,
+      "industry": "半导体",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093239",
+      "seal_amount": 153216921.0
+    },
+    {
+      "code": "002526",
+      "name": "山东矿机",
+      "price": 2.98,
+      "change_pct": 9.963099479675293,
+      "amount": 168489681.0,
+      "turnover": 3.241908073425293,
+      "industry": "专用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093354",
+      "seal_amount": 57324472.0
+    },
+    {
+      "code": "603667",
+      "name": "五洲新春",
+      "price": 49.98,
+      "change_pct": 9.99119758605957,
+      "amount": 700242112.0,
+      "turnover": 3.722181558609009,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093354",
+      "seal_amount": 199630765.0
+    },
+    {
+      "code": "603081",
+      "name": "大丰实业",
+      "price": 11.31,
+      "change_pct": 10.019454956054688,
+      "amount": 263323231.0,
+      "turnover": 5.6434526443481445,
+      "industry": "专用设备",
+      "reason": "4/2",
+      "continuous": 1,
+      "first_time": "093417",
+      "seal_amount": 41286985.0
+    },
+    {
+      "code": "600173",
+      "name": "卧龙新能",
+      "price": 5.45,
+      "change_pct": 10.1010103225708,
+      "amount": 40007343.0,
+      "turnover": 1.0733959674835205,
+      "industry": "房地产开发",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093430",
+      "seal_amount": 31372925.0
+    },
+    {
+      "code": "603109",
+      "name": "神驰机电",
+      "price": 17.93,
+      "change_pct": 10.0,
+      "amount": 159117844.0,
+      "turnover": 4.275302886962891,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093528",
+      "seal_amount": 15911082.0
+    },
+    {
+      "code": "000670",
+      "name": "盈方微",
+      "price": 7.08,
+      "change_pct": 9.937888145446777,
+      "amount": 533638592.0,
+      "turnover": 9.177549362182617,
+      "industry": "其他电源设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093715",
+      "seal_amount": 51338496.0
+    },
+    {
+      "code": "603868",
+      "name": "飞科电器",
+      "price": 34.22,
+      "change_pct": 9.996786117553711,
+      "amount": 94895182.0,
+      "turnover": 0.6452327966690063,
+      "industry": "小家电",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093734",
+      "seal_amount": 45991680.0
+    },
+    {
+      "code": "603633",
+      "name": "徕木股份",
+      "price": 6.36,
+      "change_pct": 10.034602165222168,
+      "amount": 164499272.0,
+      "turnover": 6.143593788146973,
+      "industry": "消费电子",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "093822",
+      "seal_amount": 30917282.0
+    },
+    {
+      "code": "000559",
+      "name": "万向钱潮",
+      "price": 13.18,
+      "change_pct": 10.016695022583008,
+      "amount": 1366126592.0,
+      "turnover": 3.210606098175049,
+      "industry": "汽车零部件",
+      "reason": "4/3",
+      "continuous": 1,
+      "first_time": "094439",
+      "seal_amount": 227645750.0
+    },
+    {
+      "code": "920896",
+      "name": "旺成科技",
+      "price": 16.23,
+      "change_pct": 29.943954467773438,
+      "amount": 133286220.0,
+      "turnover": 19.061880111694336,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "094602",
+      "seal_amount": 16496334.0
+    },
+    {
+      "code": "603626",
+      "name": "科森科技",
+      "price": 27.83,
+      "change_pct": 10.0,
+      "amount": 1408640368.0,
+      "turnover": 9.230318069458008,
+      "industry": "消费电子",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "094719",
+      "seal_amount": 60301459.0
+    },
+    {
+      "code": "600601",
+      "name": "方正科技",
+      "price": 10.32,
+      "change_pct": 10.021322250366211,
+      "amount": 3100361472.0,
+      "turnover": 7.349455833435059,
+      "industry": "电子元件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "094822",
+      "seal_amount": 162137767.0
+    },
+    {
+      "code": "002741",
+      "name": "光华科技",
+      "price": 20.25,
+      "change_pct": 9.99456787109375,
+      "amount": 925790240.0,
+      "turnover": 10.898491859436035,
+      "industry": "电子化学品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "094830",
+      "seal_amount": 111140869.0
+    },
+    {
+      "code": "301261",
+      "name": "恒工精密",
+      "price": 62.89,
+      "change_pct": 19.996183395385742,
+      "amount": 540578800.0,
+      "turnover": 8.457280158996582,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "094845",
+      "seal_amount": 55847955.0
+    },
+    {
+      "code": "603219",
+      "name": "富佳股份",
+      "price": 13.21,
+      "change_pct": 9.991673469543457,
+      "amount": 126483720.0,
+      "turnover": 1.7504382133483887,
+      "industry": "小家电",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "094937",
+      "seal_amount": 39713751.0
+    },
+    {
+      "code": "605288",
+      "name": "凯迪股份",
+      "price": 65.4,
+      "change_pct": 10.008410453796387,
+      "amount": 132216225.0,
+      "turnover": 2.1073789596557617,
+      "industry": "自动化设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "095126",
+      "seal_amount": 40184703.0
+    },
+    {
+      "code": "600828",
+      "name": "茂业商业",
+      "price": 4.92,
+      "change_pct": 10.067113876342773,
+      "amount": 533412944.0,
+      "turnover": 6.5094170570373535,
+      "industry": "一般零售",
+      "reason": "2/2",
+      "continuous": 2,
+      "first_time": "095648",
+      "seal_amount": 33136401.0
+    },
+    {
+      "code": "603992",
+      "name": "松霖科技",
+      "price": 22.67,
+      "change_pct": 9.995148658752441,
+      "amount": 189556315.0,
+      "turnover": 1.9354920387268066,
+      "industry": "家居用品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "100513",
+      "seal_amount": 58803713.0
+    },
+    {
+      "code": "002265",
+      "name": "建设工业",
+      "price": 20.92,
+      "change_pct": 9.989484786987305,
+      "amount": 665672448.0,
+      "turnover": 3.1460328102111816,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "100933",
+      "seal_amount": 86618255.0
+    },
+    {
+      "code": "603037",
+      "name": "凯众股份",
+      "price": 13.06,
+      "change_pct": 10.025274276733398,
+      "amount": 371136608.0,
+      "turnover": 11.00111198425293,
+      "industry": "汽车零部件",
+      "reason": "2/2",
+      "continuous": 2,
+      "first_time": "101409",
+      "seal_amount": 31523640.0
+    },
+    {
+      "code": "603337",
+      "name": "杰克科技",
+      "price": 48.83,
+      "change_pct": 10.002252578735352,
+      "amount": 1598020176.0,
+      "turnover": 7.205439567565918,
+      "industry": "专用设备",
+      "reason": "4/3",
+      "continuous": 1,
+      "first_time": "101848",
+      "seal_amount": 21176057.0
+    },
+    {
+      "code": "002915",
+      "name": "中欣氟材",
+      "price": 16.02,
+      "change_pct": 10.027472496032715,
+      "amount": 190396643.0,
+      "turnover": 4.018470287322998,
+      "industry": "化学制品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "102248",
+      "seal_amount": 27615276.0
+    },
+    {
+      "code": "605566",
+      "name": "福莱蒽特",
+      "price": 28.6,
+      "change_pct": 10.0,
+      "amount": 156833761.0,
+      "turnover": 4.367196559906006,
+      "industry": "化学制品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "102959",
+      "seal_amount": 39224900.0
+    },
+    {
+      "code": "603920",
+      "name": "世运电路",
+      "price": 37.85,
+      "change_pct": 9.997093200683594,
+      "amount": 1229537424.0,
+      "turnover": 4.6393280029296875,
+      "industry": "电子元件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "103423",
+      "seal_amount": 64127476.0
+    },
+    {
+      "code": "603226",
+      "name": "菲林格尔",
+      "price": 24.26,
+      "change_pct": 10.022676467895508,
+      "amount": 131581485.0,
+      "turnover": 1.5684388875961304,
+      "industry": "家居用品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "103714",
+      "seal_amount": 54701423.0
+    },
+    {
+      "code": "002731",
+      "name": "萃华退",
+      "price": 0.28,
+      "change_pct": 12.0,
+      "amount": 9560722.0,
+      "turnover": 15.704503059387207,
+      "industry": "饰品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "103827",
+      "seal_amount": 588996.0
+    },
+    {
+      "code": "000554",
+      "name": "泰山石油",
+      "price": 6.63,
+      "change_pct": 9.950248718261719,
+      "amount": 353762400.0,
+      "turnover": 15.176575660705566,
+      "industry": "炼化及贸",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "104430",
+      "seal_amount": 2563158.0
+    },
+    {
+      "code": "603533",
+      "name": "掌阅科技",
+      "price": 28.03,
+      "change_pct": 10.00784969329834,
+      "amount": 1358070560.0,
+      "turnover": 11.518527030944824,
+      "industry": "数字媒体",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "104939",
+      "seal_amount": 88835479.0
+    },
+    {
+      "code": "600715",
+      "name": "文投控股",
+      "price": 2.06,
+      "change_pct": 10.16042709350586,
+      "amount": 432493216.0,
+      "turnover": 7.960176467895508,
+      "industry": "游戏",
+      "reason": "6/3",
+      "continuous": 2,
+      "first_time": "105253",
+      "seal_amount": 76581284.0
+    },
+    {
+      "code": "605366",
+      "name": "宏柏新材",
+      "price": 7.74,
+      "change_pct": 9.943181991577148,
+      "amount": 227705670.0,
+      "turnover": 3.9809675216674805,
+      "industry": "化学制品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "105755",
+      "seal_amount": 64373580.0
+    },
+    {
+      "code": "603926",
+      "name": "铁流股份",
+      "price": 17.06,
+      "change_pct": 9.993552207946777,
+      "amount": 198651273.0,
+      "turnover": 5.147738933563232,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "110208",
+      "seal_amount": 7069664.0
+    },
+    {
+      "code": "603131",
+      "name": "上海沪工",
+      "price": 14.5,
+      "change_pct": 10.015174865722656,
+      "amount": 339118096.0,
+      "turnover": 7.141491413116455,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "110402",
+      "seal_amount": 31998600.0
+    },
+    {
+      "code": "001400",
+      "name": "江顺科技",
+      "price": 88.31,
+      "change_pct": 10.00249195098877,
+      "amount": 545017760.0,
+      "turnover": 19.986352920532227,
+      "industry": "专用设备",
+      "reason": "2/2",
+      "continuous": 2,
+      "first_time": "110539",
+      "seal_amount": 58115044.0
+    },
+    {
+      "code": "002862",
+      "name": "实丰文化",
+      "price": 15.38,
+      "change_pct": 10.01430606842041,
+      "amount": 120596228.0,
+      "turnover": 6.293583869934082,
+      "industry": "文娱用品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "110918",
+      "seal_amount": 124347300.0
+    },
+    {
+      "code": "605060",
+      "name": "联德股份",
+      "price": 32.16,
+      "change_pct": 9.986320495605469,
+      "amount": 158279622.0,
+      "turnover": 2.123058557510376,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "111949",
+      "seal_amount": 50913010.0
+    },
+    {
+      "code": "300006",
+      "name": "莱美药业",
+      "price": 9.92,
+      "change_pct": 19.95163345336914,
+      "amount": 2568318944.0,
+      "turnover": 26.226930618286133,
+      "industry": "化学制品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "112151",
+      "seal_amount": 49619909.0
+    },
+    {
+      "code": "001296",
+      "name": "长江材料",
+      "price": 20.23,
+      "change_pct": 10.005437850952148,
+      "amount": 134177529.0,
+      "turnover": 8.332114219665527,
+      "industry": "非金属材",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "112242",
+      "seal_amount": 6210610.0
+    },
+    {
+      "code": "002962",
+      "name": "五方光电",
+      "price": 12.83,
+      "change_pct": 10.034305572509766,
+      "amount": 254109240.0,
+      "turnover": 9.743273735046387,
+      "industry": "光学光电子",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "112445",
+      "seal_amount": 22986228.0
+    },
+    {
+      "code": "603418",
+      "name": "友升股份",
+      "price": 44.99,
+      "change_pct": 10.0,
+      "amount": 223931454.0,
+      "turnover": 5.836016654968262,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "112705",
+      "seal_amount": 26245726.0
+    },
+    {
+      "code": "301525",
+      "name": "儒竞科技",
+      "price": 47.53,
+      "change_pct": 19.994949340820312,
+      "amount": 460045840.0,
+      "turnover": 13.884538650512695,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "130109",
+      "seal_amount": 1388826.0
+    },
+    {
+      "code": "603135",
+      "name": "中重科技",
+      "price": 8.64,
+      "change_pct": 10.06369400024414,
+      "amount": 107563419.0,
+      "turnover": 2.03153133392334,
+      "industry": "专用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "130139",
+      "seal_amount": 18520332.0
+    },
+    {
+      "code": "002943",
+      "name": "宇晶股份",
+      "price": 25.11,
+      "change_pct": 9.986859321594238,
+      "amount": 211620392.0,
+      "turnover": 4.6447434425354,
+      "industry": "通用设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "130318",
+      "seal_amount": 63514715.0
+    },
+    {
+      "code": "301080",
+      "name": "百普赛斯",
+      "price": 101.24,
+      "change_pct": 19.995258331298828,
+      "amount": 1550484240.0,
+      "turnover": 12.93763256072998,
+      "industry": "生物制品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "131230",
+      "seal_amount": 37312002.0
+    },
+    {
+      "code": "603061",
+      "name": "金海通",
+      "price": 260.15,
+      "change_pct": 10.0,
+      "amount": 946264864.0,
+      "turnover": 4.310007095336914,
+      "industry": "半导体",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "131346",
+      "seal_amount": 46343121.0
+    },
+    {
+      "code": "920220",
+      "name": "朗信电气",
+      "price": 54.6,
+      "change_pct": 30.000001907348633,
+      "amount": 351027664.0,
+      "turnover": 32.71759033203125,
+      "industry": "汽车零部件",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "131453",
+      "seal_amount": 1704284.0
+    },
+    {
+      "code": "603303",
+      "name": "得邦照明",
+      "price": 29.76,
+      "change_pct": 10.018484115600586,
+      "amount": 207510017.0,
+      "turnover": 1.512540578842163,
+      "industry": "照明设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "132221",
+      "seal_amount": 4767552.0
+    },
+    {
+      "code": "603680",
+      "name": "今创集团",
+      "price": 11.33,
+      "change_pct": 10.0,
+      "amount": 208484807.0,
+      "turnover": 2.420396566390991,
+      "industry": "轨交设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "132248",
+      "seal_amount": 5745057.0
+    },
+    {
+      "code": "002879",
+      "name": "长缆科技",
+      "price": 14.95,
+      "change_pct": 10.00735855102539,
+      "amount": 104080193.0,
+      "turnover": 5.268522262573242,
+      "industry": "电网设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "132406",
+      "seal_amount": 29155490.0
+    },
+    {
+      "code": "002889",
+      "name": "东方嘉盛",
+      "price": 15.44,
+      "change_pct": 9.97150993347168,
+      "amount": 566121616.0,
+      "turnover": 15.519758224487305,
+      "industry": "物流",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "132524",
+      "seal_amount": 45418551.0
+    },
+    {
+      "code": "001270",
+      "name": "铖昌科技",
+      "price": 80.0,
+      "change_pct": 9.995875358581543,
+      "amount": 767849008.0,
+      "turnover": 4.852232456207275,
+      "industry": "军工电子",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "132703",
+      "seal_amount": 81224000.0
+    },
+    {
+      "code": "002172",
+      "name": "澳洋健康",
+      "price": 4.88,
+      "change_pct": 9.909910202026367,
+      "amount": 766080112.0,
+      "turnover": 22.010469436645508,
+      "industry": "医疗器械",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "132930",
+      "seal_amount": 61398208.0
+    },
+    {
+      "code": "300291",
+      "name": "百纳千成",
+      "price": 6.24,
+      "change_pct": 20.0,
+      "amount": 1022143152.0,
+      "turnover": 18.861181259155273,
+      "industry": "影视院线",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "134518",
+      "seal_amount": 10032672.0
+    },
+    {
+      "code": "002534",
+      "name": "西子洁能",
+      "price": 15.4,
+      "change_pct": 10.0,
+      "amount": 185697599.0,
+      "turnover": 1.5384101867675781,
+      "industry": "其他电源设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "142703",
+      "seal_amount": 20699802.0
+    },
+    {
+      "code": "002975",
+      "name": "博杰股份",
+      "price": 85.12,
+      "change_pct": 10.002584457397461,
+      "amount": 852060240.0,
+      "turnover": 7.514059543609619,
+      "industry": "自动化设备",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "143157",
+      "seal_amount": 83148535.0
+    },
+    {
+      "code": "300806",
+      "name": "斯迪克",
+      "price": 43.92,
+      "change_pct": 20.0,
+      "amount": 1823217008.0,
+      "turnover": 9.72498607635498,
+      "industry": "塑料制品",
+      "reason": "1/1",
+      "continuous": 1,
+      "first_time": "143209",
+      "seal_amount": 46392081.0
+    },
+    {
+      "code": "002696",
+      "name": "百洋股份",
+      "price": 11.77,
+      "change_pct": 10.0,
+      "amount": 1202101872.0,
+      "turnover": 33.65128707885742,
+      "industry": "饲料行业",
+      "reason": "14/9",
+      "continuous": 1,
+      "first_time": "144933",
+      "seal_amount": 77581248.0
+    }
+  ],
+  "industry_flow": [
+    {
+      "name": "电子",
+      "code": "BK1201",
+      "net_inflow": 14986376960.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 386.0
+    },
+    {
+      "name": "通信",
+      "code": "BK1215",
+      "net_inflow": 8019785216.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 267.0
+    },
+    {
+      "name": "通信设备",
+      "code": "BK0448",
+      "net_inflow": 7852826624.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 297.0
+    },
+    {
+      "name": "半导体",
+      "code": "BK1036",
+      "net_inflow": 6890792448.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 488.0
+    },
+    {
+      "name": "通信网络设备及器件",
+      "code": "BK1591",
+      "net_inflow": 6601956864.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 375.0
+    },
+    {
+      "name": "数字芯片设计",
+      "code": "BK1331",
+      "net_inflow": 5727428352.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 516.0
+    },
+    {
+      "name": "元件",
+      "code": "BK0459",
+      "net_inflow": 5031403776.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 403.0
+    },
+    {
+      "name": "印制电路板",
+      "code": "BK1340",
+      "net_inflow": 4702334720.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 429.0
+    },
+    {
+      "name": "机械设备",
+      "code": "BK1205",
+      "net_inflow": 3680791808.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 318.0
+    },
+    {
+      "name": "汽车",
+      "code": "BK1211",
+      "net_inflow": 2659180800.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 298.0
+    },
+    {
+      "name": "汽车零部件",
+      "code": "BK0481",
+      "net_inflow": 2524195072.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 347.0
+    },
+    {
+      "name": "消费电子零部件及组装",
+      "code": "BK1338",
+      "net_inflow": 1832408576.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 357.0
+    },
+    {
+      "name": "消费电子",
+      "code": "BK1037",
+      "net_inflow": 1800846592.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 331.0
+    },
+    {
+      "name": "底盘与发动机系统",
+      "code": "BK1526",
+      "net_inflow": 1780120992.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 385.0
+    },
+    {
+      "name": "通用设备",
+      "code": "BK0545",
+      "net_inflow": 1756990976.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 365.0
+    },
+    {
+      "name": "自动化设备",
+      "code": "BK1237",
+      "net_inflow": 1427541504.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 460.0
+    },
+    {
+      "name": "金属制品",
+      "code": "BK1396",
+      "net_inflow": 1334202640.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 441.0
+    },
+    {
+      "name": "基础化工",
+      "code": "BK1206",
+      "net_inflow": 942420224.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 190.0
+    },
+    {
+      "name": "塑料",
+      "code": "BK0454",
+      "net_inflow": 918725312.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 373.0
+    },
+    {
+      "name": "通信线缆及配套",
+      "code": "BK1592",
+      "net_inflow": 901386656.0,
+      "rise_count": 0,
+      "fall_count": 0,
+      "change_pct": 316.0
+    }
+  ],
+  "concept_flow": [
+    {
+      "name": "融资融券",
+      "code": "BK0596",
+      "net_inflow": 22392434688.0,
+      "change_pct": 204.0
+    },
+    {
+      "name": "基金重仓",
+      "code": "BK0536",
+      "net_inflow": 17526688512.0,
+      "change_pct": 282.0
+    },
+    {
+      "name": "科技风格",
+      "code": "BK1713",
+      "net_inflow": 17310588928.0,
+      "change_pct": 340.0
+    },
+    {
+      "name": "MSCI中国",
+      "code": "BK0821",
+      "net_inflow": 17121116160.0,
+      "change_pct": 125.0
+    },
+    {
+      "name": "深股通",
+      "code": "BK0804",
+      "net_inflow": 16030633984.0,
+      "change_pct": 210.0
+    },
+    {
+      "name": "富时罗素",
+      "code": "BK0867",
+      "net_inflow": 14868664320.0,
+      "change_pct": 99.0
+    },
+    {
+      "name": "5G概念",
+      "code": "BK0714",
+      "net_inflow": 14642830080.0,
+      "change_pct": 309.0
+    },
+    {
+      "name": "基金增仓",
+      "code": "BK1690",
+      "net_inflow": 14261297152.0,
+      "change_pct": 231.0
+    },
+    {
+      "name": "通信技术",
+      "code": "BK1650",
+      "net_inflow": 13953776896.0,
+      "change_pct": 311.0
+    },
+    {
+      "name": "百元股",
+      "code": "BK1059",
+      "net_inflow": 13208697088.0,
+      "change_pct": 428.0
+    },
+    {
+      "name": "大盘股",
+      "code": "BK1663",
+      "net_inflow": 12995506176.0,
+      "change_pct": 96.0
+    },
+    {
+      "name": "大盘成长",
+      "code": "BK1665",
+      "net_inflow": 12471431680.0,
+      "change_pct": 235.0
+    },
+    {
+      "name": "2026中报预增",
+      "code": "BK1749",
+      "net_inflow": 11560073728.0,
+      "change_pct": 206.0
+    },
+    {
+      "name": "机器人概念",
+      "code": "BK1090",
+      "net_inflow": 11350756096.0,
+      "change_pct": 334.0
+    },
+    {
+      "name": "国产芯片",
+      "code": "BK0891",
+      "net_inflow": 11102136576.0,
+      "change_pct": 335.0
+    },
+    {
+      "name": "深成500",
+      "code": "BK0568",
+      "net_inflow": 11093524480.0,
+      "change_pct": 151.0
+    },
+    {
+      "name": "标准普尔",
+      "code": "BK0879",
+      "net_inflow": 10565839104.0,
+      "change_pct": 78.0
+    },
+    {
+      "name": "CPO概念",
+      "code": "BK1128",
+      "net_inflow": 10383385856.0,
+      "change_pct": 380.0
+    },
+    {
+      "name": "HS300_",
+      "code": "BK0500",
+      "net_inflow": 10020894208.0,
+      "change_pct": 40.0
+    },
+    {
+      "name": "高市净率",
+      "code": "BK1722",
+      "net_inflow": 9399542272.0,
+      "change_pct": 275.0
+    }
+  ],
+  "sector_volume": [
+    {
+      "name": "文字媒体",
+      "volume": 4444307137.0,
+      "change_pct": 891.0,
+      "turnover": 1597.0
+    },
+    {
+      "name": "模拟芯片设计",
+      "volume": 15798688991.0,
+      "change_pct": 607.0,
+      "turnover": 297.0
+    },
+    {
+      "name": "航天装备Ⅲ",
+      "volume": 4063711851.0,
+      "change_pct": 552.0,
+      "turnover": 155.0
+    },
+    {
+      "name": "航天装备Ⅱ",
+      "volume": 4063711851.0,
+      "change_pct": 552.0,
+      "turnover": 155.0
+    },
+    {
+      "name": "医疗研发外包",
+      "volume": 19315902685.0,
+      "change_pct": 540.0,
+      "turnover": 421.0
+    },
+    {
+      "name": "其他自动化设备",
+      "volume": 10548948985.0,
+      "change_pct": 533.0,
+      "turnover": 535.0
+    },
+    {
+      "name": "视频媒体",
+      "volume": 2395404331.0,
+      "change_pct": 528.0,
+      "turnover": 962.0
+    },
+    {
+      "name": "诊断服务",
+      "volume": 2673569490.0,
+      "change_pct": 528.0,
+      "turnover": 678.0
+    },
+    {
+      "name": "机床工具",
+      "volume": 3617259451.0,
+      "change_pct": 527.0,
+      "turnover": 324.0
+    },
+    {
+      "name": "数字芯片设计",
+      "volume": 105036609408.0,
+      "change_pct": 516.0,
+      "turnover": 403.0
+    },
+    {
+      "name": "半导体设备",
+      "volume": 33693067270.0,
+      "change_pct": 509.0,
+      "turnover": 273.0
+    },
+    {
+      "name": "合成树脂",
+      "volume": 5325762202.0,
+      "change_pct": 490.0,
+      "turnover": 467.0
+    },
+    {
+      "name": "半导体",
+      "volume": 217836761806.0,
+      "change_pct": 488.0,
+      "turnover": 367.0
+    },
+    {
+      "name": "非金属材料Ⅲ",
+      "volume": 3959813124.0,
+      "change_pct": 485.0,
+      "turnover": 248.0
+    },
+    {
+      "name": "非金属材料Ⅱ",
+      "volume": 3959813124.0,
+      "change_pct": 485.0,
+      "turnover": 248.0
+    },
+    {
+      "name": "磁性材料",
+      "volume": 3629782428.0,
+      "change_pct": 471.0,
+      "turnover": 225.0
+    },
+    {
+      "name": "其他能源发电",
+      "volume": 136036235.0,
+      "change_pct": 470.0,
+      "turnover": 111.0
+    },
+    {
+      "name": "工控设备",
+      "volume": 13552419078.0,
+      "change_pct": 464.0,
+      "turnover": 335.0
+    },
+    {
+      "name": "其他医疗服务",
+      "volume": 1113565102.0,
+      "change_pct": 461.0,
+      "turnover": 463.0
+    },
+    {
+      "name": "自动化设备",
+      "volume": 52096919608.0,
+      "change_pct": 460.0,
+      "turnover": 417.0
+    },
+    {
+      "name": "分立器件",
+      "volume": 14075236448.0,
+      "change_pct": 445.0,
+      "turnover": 270.0
+    },
+    {
+      "name": "金属制品",
+      "volume": 23532877757.0,
+      "change_pct": 441.0,
+      "turnover": 435.0
+    },
+    {
+      "name": "激光设备",
+      "volume": 8988879142.0,
+      "change_pct": 438.0,
+      "turnover": 360.0
+    },
+    {
+      "name": "印制电路板",
+      "volume": 63977997632.0,
+      "change_pct": 429.0,
+      "turnover": 510.0
+    },
+    {
+      "name": "油气及炼化工程",
+      "volume": 1631182541.0,
+      "change_pct": 427.0,
+      "turnover": 165.0
+    },
+    {
+      "name": "医疗服务",
+      "volume": 26326248938.0,
+      "change_pct": 422.0,
+      "turnover": 305.0
+    },
+    {
+      "name": "膜材料",
+      "volume": 10826117503.0,
+      "change_pct": 419.0,
+      "turnover": 441.0
+    },
+    {
+      "name": "半导体材料",
+      "volume": 22331691098.0,
+      "change_pct": 417.0,
+      "turnover": 420.0
+    },
+    {
+      "name": "影视动漫制作",
+      "volume": 8975846553.0,
+      "change_pct": 408.0,
+      "turnover": 752.0
+    },
+    {
+      "name": "电子化学品Ⅲ",
+      "volume": 16594356576.0,
+      "change_pct": 408.0,
+      "turnover": 336.0
+    }
+  ],
+  "market": {
+    "date": "2026-10-28",
+    "volume": 43362282900.0,
+    "close": 3681.469,
+    "change_pct": 0.9091355126674028
+  },
+  "summary": {
+    "date": "2026-10-28",
+    "total_zt": 70,
+    "key_points": [
+      "🔥 涨停股集中板块：汽车零部件(11只)、通用设备(8只)、专用设备(5只)、化学制品(4只)、电子元件(3只)",
+      "💰 主力资金流入前三：电子(149.9亿)、通信(80.2亿)、通信设备(78.5亿)",
+      "🎯 概念板块涨幅前三：百元股(+428.00%)、CPO概念(+380.00%)、科技风格(+340.00%)",
+      "📊 大盘📈 上涨0.91%，成交额434亿"
+    ]
+  }
+}
